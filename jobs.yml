@@ -1,0 +1,63 @@
+- title: "Customer Service Representative"
+  riskLevel: "High Risk"
+  description: "AI chatbots and virtual assistants are increasingly handling routine customer inquiries, reducing the demand for human representatives."
+  alternatives:
+      - "Customer Experience Strategist"
+      - "AI Training Specialist"
+      - "Complex Problem Resolution Expert"
+
+- title: "Data Entry Clerk"
+  riskLevel: "High Risk"
+  description: "Automated data extraction and processing tools can now handle most routine data entry tasks with minimal human oversight."
+  alternatives:
+      - "Data Quality Analyst"
+      - "Process Automation Specialist"
+      - "Business Intelligence Analyst"
+
+- title: "Bookkeeper"
+  riskLevel: "High Risk"
+  description: "Accounting software with AI capabilities can automate transaction coding, reconciliation, and basic financial reporting."
+  alternatives:
+      - "Financial Systems Specialist"
+      - "Business Advisor"
+      - "Compliance Analyst"
+
+- title: "Radiologist"
+  riskLevel: "Medium Risk"
+  description: "AI can detect patterns in medical images, but radiologists will still be needed for complex cases and final interpretations."
+  alternatives:
+      - "AI-Assisted Diagnostics Specialist"
+      - "Interventional Radiologist"
+      - "Medical AI Researcher"
+
+- title: "Paralegal"
+  riskLevel: "Medium Risk"
+  description: "AI tools can handle document review and basic legal research, but complex analysis and client interaction still require human expertise."
+  alternatives:
+      - "Legal Technology Specialist"
+      - "Compliance Manager"
+      - "Legal Project Manager"
+
+- title: "Software Developer"
+  riskLevel: "Low Risk"
+  description: "While AI can generate code, developers are needed to architect solutions, review AI output, and handle complex programming challenges."
+  alternatives:
+      - "AI Integration Specialist"
+      - "Prompt Engineer"
+      - "Human-AI Collaboration Expert"
+
+- title: "Nurse"
+  riskLevel: "Low Risk"
+  description: "The hands-on care, emotional support, and complex decision-making in nursing cannot be easily automated."
+  alternatives:
+      - "Healthcare Technology Specialist"
+      - "Remote Care Coordinator"
+      - "Clinical AI Implementation Expert"
+
+- title: "Teacher"
+  riskLevel: "Low Risk"
+  description: "While AI can deliver content, the mentorship, motivation, and personalized guidance teachers provide remains essential."
+  alternatives:
+      - "Educational Technology Specialist"
+      - "Personalized Learning Designer"
+      - "AI-Enhanced Curriculum Developer"
