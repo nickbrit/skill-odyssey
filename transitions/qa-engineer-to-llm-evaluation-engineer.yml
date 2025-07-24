@@ -1,0 +1,294 @@
+from: "Manual QA Engineer"
+to: "LLM Evaluation Engineer"
+description: >
+    A transition path from manual / scripted QA—roles increasingly impacted by AI-generated test creation—
+    to a future‑proof specialty focused on designing systematic, metric‑driven evaluation, safety, and
+    reliability processes for Large Language Model (LLM) features (accuracy, faithfulness, relevance,
+    safety, robustness, cost & latency, regression tracking).
+
+role_overview:
+    current_role:
+        title: "Manual QA Engineer"
+        responsibilities:
+            - "Execute manual and scripted test cases; document defects."
+            - "Validate functional correctness against specifications and acceptance criteria."
+            - "Maintain regression suites and test data sets."
+            - "Perform exploratory testing to find edge cases."
+            - "Communicate issues and reproduction steps to developers and product stakeholders."
+    target_role:
+        title: "LLM Evaluation Engineer"
+        responsibilities:
+            - "Design and curate evaluation datasets (gold, synthetic, adversarial) for LLM/RAG systems."
+            - "Implement automated metrics: faithfulness, relevance, hallucination rate, context recall, toxicity, bias, latency, cost."
+            - "Build regression & drift monitoring pipelines for prompts, retrieval layers, and model versions."
+            - "Red‑team models (prompt injection, jailbreak, data leakage) and develop mitigations."
+            - "Collaborate with product, ML, security, and compliance to define acceptance thresholds & guardrails."
+            - "Instrument telemetry (token usage, error taxonomy) and drive optimization."
+            - "Maintain documentation of evaluation methodologies, datasets, and change logs."
+
+why_transition_works: >
+    QA professionals are skilled in systematic test design, edge case discovery, reproducible documentation,
+    and cross‑team communication. These map directly to emerging LLM needs: constructing reliable evaluation
+    datasets, defining meaningful qualitative + quantitative metrics, automating regression suites, and managing
+    model/prompt safety risks—capabilities that remain harder to commoditize than pure prompt crafting.
+
+transferable_skills:
+    - name: "Test Case Design → Prompt & Scenario Suite Design"
+      description: "Transform acceptance criteria into comprehensive prompt/evaluation suites (happy path, edge, adversarial)."
+    - name: "Defect Taxonomy → Failure Mode Classification"
+      description: "Extend bug categories to hallucination, bias, toxicity, privacy leak, refusal, tool misuse."
+    - name: "Regression Discipline → Baseline & Drift Tracking"
+      description: "Maintain golden datasets and thresholds; detect metric deltas across model/prompt versions."
+    - name: "Exploratory Testing → Structured Red Teaming"
+      description: "Creative edge case discovery evolves into systematic adversarial & jailbreak test generation."
+    - name: "Clear Bug Reports → Actionable Eval Artifacts"
+      description: "Produce reproducible evaluation records: prompt, context, output, expected rationale, metric diffs."
+    - name: "Cross-Team Communication → Multi-Stakeholder Alignment"
+      description: "Translate qualitative output failures into prioritized engineering or policy improvements."
+
+transition_roadmap:
+    - phase: "Foundations"
+      duration: "4 weeks"
+      activities:
+          - "Study LLM basics: tokens, parameters, system vs user messages, context windows."
+          - "Define core evaluation dimensions (faithfulness, relevance, hallucination, safety, robustness, latency, cost)."
+          - "Assemble a small golden dataset (≈50 Q&A or task cases) for a familiar domain."
+          - "Implement a minimal evaluation harness (prompt → output → metric calculation) using one framework (e.g. Ragas or promptfoo)."
+          - "Start an evaluation journal (date, change, metrics, interpretation)."
+      resources:
+          - title: "OpenAI API Docs"
+            link: "https://platform.openai.com/docs"
+          - title: "Anthropic Docs"
+            link: "https://docs.anthropic.com/"
+          - title: "LangChain Introduction"
+            link: "https://python.langchain.com/docs/"
+          - title: "Ragas Documentation"
+            link: "https://docs.ragas.io/en/stable/"
+          - title: "Promptfoo"
+            link: "https://www.promptfoo.dev/"
+          - title: "OpenAI Evals (GitHub)"
+            link: "https://github.com/openai/evals"
+    - phase: "Core Skill Building"
+      duration: "6 weeks"
+      activities:
+          - "Expand metrics: semantic similarity, faithfulness, hallucination detection, context recall@k, toxicity, bias."
+          - "Introduce retrieval (RAG) scenarios: measure retrieval quality (recall, precision, grounded answer ratio)."
+          - "Automate nightly regression runs in CI; persist historical metric trends."
+          - "Create adversarial / red-team set (prompt injection, jailbreak attempts, misleading context)."
+          - "Add cost & latency instrumentation (tokens per successful task, p95 latency)."
+          - "Compare outputs across multiple models (e.g. GPT vs Claude vs open weights) with the same dataset."
+      resources:
+          - title: "TruLens"
+            link: "https://www.trulens.org/"
+          - title: "LangSmith (Tracing & Evaluation)"
+            link: "https://docs.smith.langchain.com/"
+          - title: "Pinecone Docs"
+            link: "https://docs.pinecone.io/"
+          - title: "Weaviate Learn Center"
+            link: "https://weaviate.io/learn"
+          - title: "Chroma Docs"
+            link: "https://docs.trychroma.com/"
+          - title: "Helicone (Observability)"
+            link: "https://www.helicone.ai/"
+          - title: "LiteLLM"
+            link: "https://github.com/BerriAI/litellm"
+          - title: "Detoxify (Toxicity Classifier)"
+            link: "https://github.com/unitaryai/detoxify"
+    - phase: "Applied Projects & Specialization"
+      duration: "6 weeks"
+      activities:
+          - "Project: Hallucination reduction—baseline vs improved retrieval/prompt chain, quantify rate drop."
+          - "Project: Retrieval strategy benchmark (chunking overlap or hybrid BM25+vector vs pure vector)."
+          - "Project: Adversarial red-team harness with jailbreak taxonomy & mitigation iteration."
+          - "Project: Cost optimization (prompt caching, model tiering) with $/correct answer impact."
+          - "Implement drift detection thresholds (trigger alerts on >X% metric delta)."
+          - "Publish case studies (methods, metrics, before/after)."
+      resources:
+          - title: "Anthropic Prompt Caching"
+            link: "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching"
+          - title: "OpenAI Structured Outputs"
+            link: "https://platform.openai.com/docs/guides/structured-outputs"
+          - title: "Microsoft Responsible AI Standard"
+            link: "https://www.microsoft.com/ai/responsible-ai"
+          - title: "Google Responsible AI"
+            link: "https://ai.google/responsibility/"
+          - title: "RAG Evaluation Paper (Faithfulness Metrics)"
+            link: "https://arxiv.org/abs/2309.15217"
+          - title: "Prompt Injection Defense Guidance"
+            link: "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-injection"
+    - phase: "Job Transition & Positioning"
+      duration: "4 weeks"
+      activities:
+          - "Refactor resume: highlight metric improvements (hallucination %, cost/token reduction, recall gains)."
+          - "Create portfolio site/dashboard with evaluation trend charts & methodology descriptions."
+          - "Prepare STAR stories (e.g. 'Reduced hallucination rate 22%→7% via retrieval tuning')."
+          - "Build boolean search strings targeting 'LLM Evaluation', 'AI Quality', 'AI Safety Engineer'."
+          - "Mock interviews: design an evaluation plan in constrained time."
+          - "Negotiate compensation referencing cost savings & risk mitigation impact."
+      resources:
+          - title: "DeepLearning.AI: Building Systems with the ChatGPT API"
+            link: "https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt-api/"
+          - title: "DeepLearning.AI: ChatGPT Prompt Engineering for Developers"
+            link: "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/"
+          - title: "Azure AI Fundamentals (AI-900)"
+            link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+          - title: "LangChain Evaluation Docs"
+            link: "https://python.langchain.com/docs/expression_language/callbacks/evaluation"
+          - title: "Perspective API (Toxicity Reference)"
+            link: "https://developers.perspectiveapi.com/"
+
+essential_skills:
+    technical_skills:
+        - "LLM Fundamentals (prompts, parameters, context limits)"
+        - "Evaluation Metrics (faithfulness, semantic similarity, hallucination rate)"
+        - "Retrieval Evaluation (recall@k, precision@k, grounded answer ratio)"
+        - "Adversarial & Safety Testing (prompt injection, jailbreak, toxicity, PII)"
+        - "Dataset Curation & Versioning (gold, synthetic, adversarial sets)"
+        - "Scripting & Automation (Python / TypeScript for harnesses & CI)"
+        - "Observability & Cost Instrumentation (latency, token usage, caching)"
+        - "Experiment Tracking & Reproducibility (metadata, version control)"
+    soft_skills:
+        - "Analytical Thinking (metric selection & interpretation)"
+        - "Clear Technical Communication (concise evaluation reports)"
+        - "Stakeholder Alignment (negotiating thresholds & trade-offs)"
+        - "Adversarial Mindset (creative failure mode discovery)"
+        - "Prioritization (focusing on impactful failure clusters)"
+        - "Ethical & Responsible Judgment (bias, privacy, safety awareness)"
+
+certifications:
+    - name: "Azure AI Fundamentals (AI-900)"
+      provider: "Microsoft"
+      link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+    - name: "Google Cloud Generative AI Learning Path (Skill Badges)"
+      provider: "Google Cloud"
+      link: "https://www.cloudskillsboost.google/paths/118"
+    - name: "AWS Certified Machine Learning – Specialty"
+      provider: "Amazon Web Services"
+      link: "https://aws.amazon.com/certification/certified-machine-learning-specialty/"
+    - name: "Responsible AI Internal / Vendor Training"
+      provider: "Various"
+      link: "https://ai.google/responsibility/"
+
+job_market:
+    roles:
+        - "LLM Evaluation Engineer"
+        - "AI Quality Engineer"
+        - "AI Safety Engineer (Evaluation Focus)"
+        - "Generative AI Test Engineer"
+        - "Prompt & Evaluation Engineer"
+    industries:
+        - "SaaS & Developer Platforms"
+        - "Financial Services / FinTech"
+        - "Healthcare & Life Sciences"
+        - "E-commerce & Customer Support Automation"
+        - "Education & Knowledge Platforms"
+    salary_expectations:
+        entry_level: "$80,000 – $110,000"
+        mid_level: "$110,000 – $150,000"
+        senior_level: "$150,000 – $200,000+"
+
+recommended_resources:
+    learning_resources:
+        - title: "OpenAI Evals"
+          link: "https://github.com/openai/evals"
+        - title: "Ragas Documentation"
+          link: "https://docs.ragas.io/en/stable/"
+        - title: "Promptfoo"
+          link: "https://www.promptfoo.dev/"
+        - title: "TruLens"
+          link: "https://www.trulens.org/"
+        - title: "LangChain Docs"
+          link: "https://python.langchain.com/docs/"
+        - title: "LangSmith Docs"
+          link: "https://docs.smith.langchain.com/"
+        - title: "Anthropic Docs"
+          link: "https://docs.anthropic.com/"
+        - title: "OpenAI API Docs"
+          link: "https://platform.openai.com/docs"
+    communities:
+        - title: "LangChain GitHub Discussions"
+          link: "https://github.com/langchain-ai/langchain/discussions"
+        - title: "OpenAI Developer Forum"
+          link: "https://community.openai.com/"
+        - title: "Anthropic Community Channels"
+          link: "https://docs.anthropic.com/"
+        - title: "Reddit r/MachineLearning"
+          link: "https://www.reddit.com/r/MachineLearning/"
+        - title: "LLM Evaluation / RAG Discord Communities"
+          link: "https://github.com/promptfoo/promptfoo#community"
+    books:
+        - title: "Designing Data-Intensive Applications"
+          link: "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
+        - title: "Building Intelligent Systems"
+          link: "https://www.oreilly.com/library/view/building-intelligent-systems/9781491971444/"
+        - title: "Responsible AI Guidelines (Microsoft)"
+          link: "https://www.microsoft.com/ai/responsible-ai"
+        - title: "RAG Evaluation Paper"
+          link: "https://arxiv.org/abs/2309.15217"
+
+evaluation_playbook:
+    metrics:
+        quality:
+            - "Faithfulness (supported claim ratio)"
+            - "Hallucination Rate (unsupported claim incidence)"
+            - "Relevance / Semantic Similarity"
+            - "Coverage (missing key fact count)"
+        retrieval:
+            - "Context Recall@k"
+            - "Context Precision@k"
+            - "Grounded Answer Ratio"
+        safety:
+            - "Toxicity Score Distribution"
+            - "Jailbreak Success Rate"
+            - "Prompt Injection Success Rate"
+            - "PII Leakage Rate"
+        cost_latency:
+            - "Tokens per Successful Task"
+            - "Cost per Correct Answer"
+            - "p95 Latency"
+        robustness:
+            - "Adversarial Variant Accuracy"
+            - "Drift (metric delta vs baseline)"
+    workflow_steps:
+        - "Define target use-case & success metrics with stakeholders."
+        - "Curate & version datasets (gold, synthetic, adversarial)."
+        - "Run baseline evaluation across model/prompt variants."
+        - "Cluster failures, classify failure modes, prioritize."
+        - "Iterate prompts/retrieval/safety rules; re-measure."
+        - "Nightly regression + alerts on threshold breaches."
+        - "Monthly drift & cost review; update datasets as domain evolves."
+    reporting:
+        - "Dashboard (trend lines + thresholds)"
+        - "Failure Cluster Digest"
+        - "Safety Incident Log"
+        - "Changelog (dataset/model/prompt versions)"
+
+portfolio_project_ideas:
+    - title: "Hallucination Reduction Study"
+      description: "Baseline vs improved retrieval/prompt chain; measure hallucination rate drop & faithfulness gain."
+    - title: "Adversarial Red-Team Harness"
+      description: "Automated jailbreak/injection suite with mitigation iteration and success-rate tracking."
+    - title: "Cost & Latency Optimization Dashboard"
+      description: "Token/latency instrumentation plus caching & model tiering experiments; report $/correct answer."
+    - title: "Retrieval Strategy Benchmark"
+      description: "Chunking overlap & hybrid search vs pure vector; analyze recall@k, precision@k, latency."
+    - title: "Safety & Bias Evaluation Suite"
+      description: "Integrate toxicity/PII/bias probes; scheduled regression and summary reports."
+    - title: "Golden Dataset Versioning System"
+      description: "Automated dataset diff & semantic coverage reporting integrated into CI."
+
+ethical_and_safety_considerations:
+    - "Bias & Fairness: include protected attribute variants; monitor disparate error rates."
+    - "Privacy: detect & mask PII; minimize storage of raw user inputs."
+    - "Prompt Injection Defense: sanitize external content, restrict tool/function access."
+    - "Jailbreak Mitigation: maintain evolving adversarial suite; track success trends."
+    - "Transparency: document metrics, thresholds, known limitations."
+    - "Responsible Deployment: gate releases on meeting safety + quality criteria."
+
+risk_mitigation_for_role_future:
+    - "Deepen metric sophistication (beyond generic similarity)."
+    - "Own automated pipelines & infrastructure, not just manual analysis."
+    - "Integrate retrieval + safety + cost dimensions for multi-axis expertise."
+    - "Maintain reproducibility (versioned datasets, config-locked runs)."
+    - "Quantify business impact (cost reduction, reliability improvements)."
+    - "Continuously track model/provider changes & emerging evaluation research."
